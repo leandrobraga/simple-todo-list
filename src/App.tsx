@@ -1,13 +1,23 @@
-import { useState } from 'react'
+import { Header } from './components/Header';
+import { NewTask } from './components/NewTask';
 
 import './global.css';
-
+import styles from './App.module.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1>Todo list</h1>
+    <div>
+      <Header />
+      <main className={styles.wrapper}>
+        <div >
+          <NewTask />
+          <div>
+            Principal
+          </div>
+        </div>
+
+      </main>
+    </div>
   )
 }
 

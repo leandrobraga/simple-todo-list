@@ -1,0 +1,36 @@
+.newTask {
+  width: 46rem;
+  margin-top: -2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newTask input {
+  width: 39.875rem;
+  height: 3.375rem;
+   border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--gray-500);
+  color: var(--gray-300);
+  border: 0;
+  margin-right: 0.5rem;
+}
+
+.newTask button {
+  background: var(--blue-dark);
+  color: var(--white);
+  border-radius: 8px;
+  height: 3.375rem;
+  width: 5.625rem;
+  border: 0;
+  font-weight: bold;
+}
+
+.newTask button > img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 10px;
+  padding-top: 4px;
+}
