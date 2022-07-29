@@ -1,14 +1,14 @@
 import styles from './NewTask.module.css';
 
-import Plus from '../assets/plus.svg';
+import { PlusCircle } from 'phosphor-react';
 
 export function NewTask() {
   return (
     <form className={styles.newTask}>
       <input placeholder='Adicione uma nova tarefa' />
       <button type="submit">
-        <span>Criar</span>
-        <img src={Plus} alt="Logo Simple Todo list" />
+        Criar
+        <PlusCircle size={20} className={styles.iconPlus}/>
       </button>
     </form>
   );

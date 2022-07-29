@@ -3,17 +3,16 @@ import { NewTask } from './components/NewTask';
 
 import './global.css';
 import styles from './App.module.css';
+import { ListTasks } from './components/ListTasks';
 
 function App() {
   return (
     <div>
       <Header />
       <main className={styles.wrapper}>
-        <div >
+        <div>
           <NewTask />
-          <div>
-            Principal
-          </div>
+          <ListTasks />
         </div>
 
       </main>

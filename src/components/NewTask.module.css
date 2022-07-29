@@ -28,9 +28,7 @@
   font-weight: bold;
 }
 
-.newTask button > img {
-  width: 1.2rem;
-  height: 1.2rem;
+.iconPlus {
   margin-left: 10px;
-  padding-top: 4px;
+  padding-top: 2.5px
 }

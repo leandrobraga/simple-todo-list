@@ -1,0 +1,68 @@
+.tasks {
+  margin-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.created {
+  font-weight: bold;
+  color: var(--blue);
+  font-size: 0.875rem;
+  line-height: 1rem;
+
+}
+
+.done {
+  font-weight: bold;
+  color: var(--purple);
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.counter {
+  margin-left: 0.5rem;
+  width: 1.5625rem;
+  height: 1.1875rem;
+  border-radius: 999px;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  padding: 2px 8px;
+}
+
+.empty {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.empty img {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+.firstLine {
+  font-weight: bold;
+  line-height: 1.4rem;
+  color: var(--gray-300);
+}
+
+.secondLine {
+  font-weight: normal;
+  line-height: 1.4rem;
+  color: var(--gray-300);
+}

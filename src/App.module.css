@@ -8,3 +8,9 @@
   /* border: 1px solid;
   border-color: red; */
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
