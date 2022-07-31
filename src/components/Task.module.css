@@ -25,7 +25,7 @@
 }
 
 .task button:hover {
-  color: var(--green-200);
+  color: var(--red);
 }
 
 .taskCheckBox {
@@ -49,4 +49,8 @@
   align-items: center;
   justify-content: center;
   outline: 0rem;
+}
+
+.taskCheckBox:checked + p {
+  text-decoration: line-through;
 }
