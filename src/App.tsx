@@ -35,13 +35,23 @@ function App() {
     setTasks(tasksWithoutDeleteOne);
   }
 
+  function updateTask(taskToUpdate: TaskToDo) {
+    const tasksUpdates = tasks.filter((task) => {
+      if (task.id === taskToUpdate.id) {
+        task.checked = !task.checked;
+      }
+      return task;
+    });
+    setTasks(tasksUpdates);
+  }
+
   return (
     <div>
       <Header />
       <main className={styles.wrapper}>
         <div>
           <NewTask onNewTask={createNewTaskToDo}  />
-          <ListTasks tasks={tasks} onDeleteTask={deleteTask}/>
+          <ListTasks tasks={tasks} onDeleteTask={deleteTask} onUpdateTask={updateTask}/>
         </div>
 
       </main>

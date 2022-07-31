@@ -6,12 +6,14 @@ import { Task } from './Task';
 
 interface ListTasksProps {
   tasks: TaskToDo[];
-  onDeleteTask: (task: TaskToDo) => void
+  onDeleteTask: (task: TaskToDo) => void;
+  onUpdateTask: (task: TaskToDo) => void;
 }
 
-export function ListTasks({ tasks, onDeleteTask }: ListTasksProps) {
-  const tasksCompleted = tasks.reduce((prev, current) => current.checked === false ? prev + 1 : 0, 0);
-
+export function ListTasks({ tasks, onDeleteTask, onUpdateTask }: ListTasksProps) {
+  const tasksCompleted = tasks.filter((task) => {
+    return task.checked
+  });
   return (
     <div className={styles.tasks}>
       <div className={styles.info}>
@@ -21,7 +23,7 @@ export function ListTasks({ tasks, onDeleteTask }: ListTasksProps) {
         </span>
         <span className={styles.done}>
           Concluídas
-          <span className={styles.counter}>{ tasksCompleted } de { tasks.length }</span>
+          <span className={styles.counter}>{ tasksCompleted.length } de { tasks.length }</span>
         </span>
       </div>
       {
@@ -32,7 +34,7 @@ export function ListTasks({ tasks, onDeleteTask }: ListTasksProps) {
             <p className={styles.secondLine}>Crie tarefas e organize seus itens a fazer</p>
           </div>
           :
-          tasks.map(task => <Task key={task.id} task={task} onDeleteTask={onDeleteTask} />)
+          tasks.map(task => <Task key={task.id} task={task} onDeleteTask={onDeleteTask} onUpdateTask={onUpdateTask} />)
       }
     </div>
   );

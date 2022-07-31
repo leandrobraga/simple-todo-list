@@ -8,11 +8,12 @@ import styles from './Task.module.css';
 interface TaskProps {
   task: TaskToDo;
   onDeleteTask: (task: TaskToDo) => void;
+  onUpdateTask: (task: TaskToDo) => void;
 }
 
-export function Task({task, onDeleteTask}: TaskProps) {
+export function Task({task, onDeleteTask, onUpdateTask}: TaskProps) {
   function handleCheckedTask(event: ChangeEvent<HTMLInputElement>) {
-    event.preventDefault();
+    onUpdateTask(task);
   }
 
   function handleDeleteTask() {
@@ -21,7 +22,7 @@ export function Task({task, onDeleteTask}: TaskProps) {
 
   return (
     <div className={styles.task}>
-      <input type="checkbox" className={styles.taskCheckBox} onChange={handleCheckedTask} />
+      <input type="checkbox" checked={task.checked} className={styles.taskCheckBox} onChange={handleCheckedTask} />
       <p>{task.description}</p>
       <button onClick={handleDeleteTask}><Trash size={24}/></button>
     </div>
